@@ -1,0 +1,17 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stovepipe Wells Village Hotel",
+        "address": "Death Valley National Park, 51880 CA-190, DEATH VALLEY, CA 92328, United States",
+        "type": "Hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.14545248936105, 36.605668013094025]
+      }
+    }
+  ]
+}

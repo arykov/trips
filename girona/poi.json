@@ -1,0 +1,271 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rustik Café",
+        "address": "Carrer de la Vila, 10, 17257 Torroella de Montgrí, Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.1275, 41.9745]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Banys Vells",
+        "address": "Passeig Darder, 5, 17820 Banyoles, Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7608, 42.1166]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rocacorba Food Truck",
+        "address": "Veïnat de Pujarnol, 17834, Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7186, 42.0833]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La Comuna",
+        "address": "Plaça de l'Església, 3, 17462 Sant Martí Vell, Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.9467, 42.0333]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oniria Café",
+        "address": "Carrer dels Sastres, 13, 17800 Olot, Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4901, 42.1829]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La Fábrica",
+        "address": "Carrer de la Llebre, 3, 17004 Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8249, 41.9843]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Espresso Mafia",
+        "address": "Carrer de la Cort Reial, 5, 17004 Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8245, 41.9839]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eat Sleep Cycle Café",
+        "address": "Carrer de l'Albereda, 15, 17004 Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8237, 41.9847]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Federal Café",
+        "address": "Carrer de la Força, 9, 17004 Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8242, 41.9835]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hidden Coffee Roasters",
+        "address": "Rambla de la Llibertat, 25, 17004 Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8246, 41.9836]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Can Carlus",
+        "address": "Av. St. Raimon de Penyafort, 9, 17320 Tossa de Mar, Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.9333, 41.7220]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Cafè de la Riera",
+        "address": "Passeig del Mar, 12, 17220 Sant Feliu de Guíxols, Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.0302, 41.7814]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cafè del Mar",
+        "address": "Passeig del Mar, 14, 17230 Palamós, Girona, Spain",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.1293, 41.8486]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "name": "El Cafetí de la Concòrdia",
+        "address": "Carrer de la Concòrdia, 8",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.9991, 41.9757]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cal Carreter",
+        "address": "C/Casa Noves, No 13",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.9756, 41.9664]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "name": "Ca L'Arcadi",
+        "address": "Plaça Jaume I, 14",
+	"type": "cafe"
+
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.9991, 41.9757]
+        
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Roura Blanch",
+        "address": "Plaça Jaume I, 17116 Monells",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.9991, 41.9757]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Els Metges",
+        "address": "GI-664, 17116 Cruïlles Monells I Sant Sadurní",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.9578, 41.9845]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bar Angelines",
+        "address": "Plaça del Firal, 13, Santa Coloma de Farners",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.6633, 41.8624]
+      }
+    }
+,
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Restaurant Cal Ganso",
+        "address": "Sant Martí de Llémena, Girona",
+        "type": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.6750, 42.0440]
+      }
+    }
+,{
+      "type": "Feature",
+      "properties": {
+        "name": "Cafeteria Cal Negre",
+        "address": "Llagostera, Girona, Spain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8931, 41.8306]
+      }
+    },
+ {
+      "type": "Feature",
+      "properties": {
+        "name": "Cafeteria El Cacau Cafè d'autor",
+        "address": "Cassà de la Selva, Girona, Spain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8756, 41.8890]
+      }
+    }
+
+  ]
+}
