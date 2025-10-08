@@ -13,6 +13,11 @@
   <!-- Map Container -->
 
   <div id="waymark-map"></div>
+  <div id="export-here" style="position: fixed; bottom: 20px; left: 20px;">
+    <select id="downloadGpxSelect">
+      <option value="">Download GPX</option>
+    </select>
+  </div>
 
   <script>
   </script>

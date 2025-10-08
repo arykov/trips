@@ -28,20 +28,20 @@
 
       return geojson.features.map(feature => {
         if(feature.geometry.type === 'LineString'){
-        metrics = feature.geometry.coordinates.reduce((acc, coord) => {
-          acc.distance += haversineDistance(acc.lastCoord, coord)
+          metrics = feature.geometry.coordinates.reduce((acc, coord) => {
+            acc.distance += haversineDistance(acc.lastCoord, coord)
 
-          const elevationDiff = coord[2] - acc.lastCoord[2]
-          if (elevationDiff > 0) {
-            acc.ascent += elevationDiff;
-          } else {
-            acc.descent -= elevationDiff;
-          }
-          acc.lastCoord = coord
-          return acc
+            const elevationDiff = coord[2] - acc.lastCoord[2]
+            if (elevationDiff > 0) {
+              acc.ascent += elevationDiff;
+            } else {
+              acc.descent -= elevationDiff;
+            }
+            acc.lastCoord = coord
+            return acc
 
-        }, { "distance": 0, "ascent": 0, "descent": 0, "lastCoord": feature.geometry.coordinates.length > 0 ? feature.geometry.coordinates[0] : [0, 0, 0] })
-        return { "distance": metrics.distance.toFixed(2), "ascent": metrics.ascent.toFixed(2), "descent": metrics.descent.toFixed(2) }
+          }, { "distance": 0, "ascent": 0, "descent": 0, "lastCoord": feature.geometry.coordinates.length > 0 ? feature.geometry.coordinates[0] : [0, 0, 0] })
+          return { "distance": metrics.distance.toFixed(2), "ascent": metrics.ascent.toFixed(2), "descent": metrics.descent.toFixed(2) }
       } else return { "distance": 0, "ascent": 0, "descent": 0 }
 
       })
@@ -55,6 +55,13 @@
         }
       }
       features.sort((a, b) => distanceZeroIfNull(a) - distanceZeroIfNull(b))
+    }
+    function downloadGpxFile(){
+      console.log(this.value)
+      const a = document.createElement('a');
+      a.href = this.value;
+      //a.download = filename;
+      a.click();
     }
     async function loadMaps() {
       try {
@@ -74,13 +81,22 @@
 
         const maps = await response.json();
         console.log(maps)
+        const gpxDownloadSelect = document.getElementById('downloadGpxSelect');
+        gpxDownloadSelect.addEventListener('change', downloadGpxFile)
         const fetchAll = async () => {
+          
+
           try {
             // Fetch all URLs in parallel
             const responses = await Promise.all(maps.map(url => fetch(url).then(res => {
               if (!res.ok) {
                 throw new Error('Response not ok')
               }
+              const option = document.createElement('option');
+              option.text = url.split('/').filter(Boolean).pop().split('.')[0];
+              option.value = url;
+              gpxDownloadSelect.add(option); 
+
               return res.text()
             }).then(text => {
               const parser = new DOMParser();
@@ -90,7 +106,8 @@
               for (i = 0; i < g.features.length; i++) {
                 delete geoJsonMetrics[i].descent
                 g.features[i].properties.metrics = geoJsonMetrics[i]
-
+                g.features[i].properties.url = url
+                g.features[i].properties.type = url.split('/').filter(Boolean).pop().split('.')[0]
               }
 
               return g
@@ -109,12 +126,11 @@
             
             for (i = 0; i < geoJson.features.length; i++) {
               if (geoJson.features[i].geometry.type === 'LineString') {
-                const type = `${geoJson.features[i].properties.metrics.distance}km asc:${geoJson.features[i].properties.metrics.ascent}m id:${i}`
-
-                geoJson.features[i].properties.type = type
+                const info = `${geoJson.features[i].properties.metrics.distance}km asc:${geoJson.features[i].properties.metrics.ascent}m`                
+                geoJson.features[i].properties.name = info
                 options.map_options.line_types.push(
                   {
-                    "line_title": type,
+                    "line_title": geoJson.features[i].properties.type,
                     "line_colour": colors[i % colors.length],
                     "line_weight": "5",
                     "line_opacity": "0.7",
