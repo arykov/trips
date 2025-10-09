@@ -13,11 +13,14 @@
   <!-- Map Container -->
 
   <div id="waymark-map">
-  <div id="export-here" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000">
-    <select id="downloadGpxSelect">
-      <option value="">Download GPX</option>
-    </select>
-  </div>
+    <div id="export-here" style="position: absolute; bottom: 20px; left: 20px; z-index: 1000">
+      <select id="downloadGpxSelect">
+        <option value="">Download GPX ...</option>
+      </select>
+      <select id="navigateSelect">
+        <option value="">Navigate to ...</option>
+      </select>
+    </div>
   </div>
   
 </body>

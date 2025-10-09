@@ -63,6 +63,14 @@
       //a.download = filename;
       a.click();
     }
+    function navigate(){
+      console.log(this.value)
+      const a = document.createElement('a');
+      a.href = this.value;
+      a.target = '_blank'
+      //a.download = filename;
+      a.click();
+    }
     async function loadMaps() {
       try {
         const poiResponse = await fetch('poi.json')
@@ -82,7 +90,9 @@
         const maps = await response.json();
         console.log(maps)
         const gpxDownloadSelect = document.getElementById('downloadGpxSelect');
+        const navigateSelect = document.getElementById('navigateSelect');
         gpxDownloadSelect.addEventListener('change', downloadGpxFile)
+        navigateSelect.addEventListener('change', navigate)
         const fetchAll = async () => {
           
 
@@ -96,7 +106,6 @@
               option.text = url.split('/').filter(Boolean).pop().split('.')[0];
               option.value = url;
               gpxDownloadSelect.add(option); 
-
               return res.text()
             }).then(text => {
               const parser = new DOMParser();
@@ -108,6 +117,13 @@
                 g.features[i].properties.metrics = geoJsonMetrics[i]
                 g.features[i].properties.url = url
                 g.features[i].properties.type = url.split('/').filter(Boolean).pop().split('.')[0]
+                //problematic if multiple tracks in the same gpx
+                if(g.features[i].geometry.type === 'LineString'){
+                  const option = document.createElement('option');
+                  option.text = url.split('/').filter(Boolean).pop().split('.')[0];
+                  option.value = `https://www.google.com/maps/dir/?api=1&origin=current+location&destination=${g.features[i].geometry.coordinates[0][1]},${g.features[i].geometry.coordinates[0][0]}`;
+                  navigateSelect.add(option); 
+                }
               }
 
               return g
