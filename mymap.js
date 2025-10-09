@@ -1,3 +1,5 @@
+function showMap(gpxPaths){
+
     colors = ["black", "gray", "navy", "blue", "teal", "aqua", "green", "lime", "olive", "yellow", "maroon", "red", "purple", "fuchsia"]
     function calculateGeoJsonMetrics(geojson) {
       function haversineDistance(coord1, coord2) {
@@ -82,13 +84,8 @@
           poiGeoJson = { "type": "FeatureCollection", "features": [] }
         }
 
-        const response = await fetch('maps.json');
-        if (!response.ok) {
-          throw new Error("Unable to load maps.json: ${response.status}");
-        }
-
-        const maps = await response.json();
-        console.log(maps)
+       
+        console.log(gpxPaths)
         const gpxDownloadSelect = document.getElementById('downloadGpxSelect');
         const navigateSelect = document.getElementById('navigateSelect');
         gpxDownloadSelect.addEventListener('change', downloadGpxFile)
@@ -98,7 +95,7 @@
 
           try {
             // Fetch all URLs in parallel
-            const responses = await Promise.all(maps.map(url => fetch(url).then(res => {
+            const responses = await Promise.all(gpxPaths.map(url => fetch(url).then(res => {
               if (!res.ok) {
                 throw new Error('Response not ok')
               }
@@ -173,5 +170,6 @@
         console.error(error.message);
       }
     }
-
+ 
     loadMaps();    
+}
