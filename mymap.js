@@ -119,9 +119,13 @@
                 g.features[i].properties.type = url.split('/').filter(Boolean).pop().split('.')[0]
                 //problematic if multiple tracks in the same gpx
                 if(g.features[i].geometry.type === 'LineString'){
+                  alert('1')
                   const option = document.createElement('option');
+                  alert(option)
                   option.text = url.split('/').filter(Boolean).pop().split('.')[0];
+                  alert(option.text)
                   option.value = `https://www.google.com/maps/dir/?api=1&origin=current+location&destination=${g.features[i].geometry.coordinates[0][1]},${g.features[i].geometry.coordinates[0][0]}`;
+                  alert(option.value)
                   navigateSelect.add(option); 
                 }
               }
