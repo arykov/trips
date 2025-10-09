@@ -11,7 +11,7 @@
       {% assign gpx_dir = {page.dir}| append: "gpx/" %}
       {% assign files_in_dir = site.static_files | where_exp: "f", "f.path contains gpx_dir" %}
       {% for file in files_in_dir %}
-        {% assign quoted_path = '"'|append: file.path|append: '"'|append: ","%}
+        {% assign quoted_path = '"gpx/'|append: file.name|append: '"'|append: ","%}
         {{ quoted_path }}
       {% endfor %}
     ]
