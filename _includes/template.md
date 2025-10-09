@@ -12,15 +12,14 @@
 <body>
   <!-- Map Container -->
 
-  <div id="waymark-map"></div>
-  <div id="export-here" style="position: fixed; bottom: 20px; left: 20px;">
+  <div id="waymark-map">
+  <div id="export-here" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000">
     <select id="downloadGpxSelect">
       <option value="">Download GPX</option>
     </select>
   </div>
-
-  <script>
-  </script>
+  </div>
+  
 </body>
 
 </html>
