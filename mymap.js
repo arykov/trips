@@ -72,6 +72,7 @@ function showMap(gpxPaths){
       a.target = '_blank'
       //a.download = filename;
       a.click();
+      setTimeout(() => a.click(), 1)
     }
     async function loadMaps() {
       try {
@@ -172,4 +173,5 @@ function showMap(gpxPaths){
     }
  
     loadMaps();    
+
 }
