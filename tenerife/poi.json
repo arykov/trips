@@ -1,18 +1,7 @@
 {
   "type": "FeatureCollection",
   "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "AirBnB",
-        "address": "n/a",
-        "type": "cafe"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-74.6138814, 46.2158014]
-      }
-    }
+    
 
 
 
