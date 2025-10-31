@@ -1,6 +1,14 @@
 function showMap(gpxPaths){
 
-    colors = ["black", "gray", "navy", "blue", "teal", "aqua", "green", "lime", "olive", "yellow", "maroon", "red", "purple", "fuchsia"]
+    const colors = [
+      "black", "gray", "navy", "blue", "teal", "aqua", "green", "lime", "olive", "yellow",
+      "maroon", "red", "purple", "fuchsia", "orange", "brown", "gold", "silver", "indigo",
+      "violet", "turquoise", "cyan", "magenta", "coral", "crimson", "khaki", "plum",
+      "salmon", "orchid", "tan", "beige", "chocolate", "ivory", "lavender", "mintcream",
+      "seagreen", "skyblue", "slateblue", "tomato", "peru", "peachpuff", "rosybrown",
+      "sienna", "darkgreen", "darkblue", "darkred", "darkorange", "deeppink", "lightblue",
+      "lightgreen", "lightcoral", "lightgray", "darkgray"
+    ];
     function calculateGeoJsonMetrics(geojson) {
       function haversineDistance(coord1, coord2) {
 	      
